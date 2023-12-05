@@ -1,0 +1,175 @@
+#组态节点集合-nodeList组态节点集合-nodeList
+nodeList: admin账号登录查看----
+api_nodeList: imotor-api/imotor/device/api/v1/node/nodeList?tenantId=21323&tenantType=1
+
+paload:
+  tenantTpye: 2
+
+#断言
+nodeName: 工厂测试
+
+#=====================================================================================================================
+#设备概览统计-deviceIotStatistics
+deviceIotStatistics: admin账号登录查看----设备概览统计-deviceIotStatistics
+api_deviceIotStatistics: imotor-api/imotor/device/api/v1/device/deviceIotStatistics?tenantId=21323&tenantType=1
+
+paload_device:
+  tenantId: 21324
+  tenantTpye: 2
+
+#断言
+total: 4
+
+
+#=====================================================================================================================
+
+#有未通报状态的高报、低保设备台数-returnDeviceNumber
+returnDeviceNumber: admin账号登录查看----有未通报状态的高报、低保设备台数-returnDeviceNumber
+api_returnDeviceNumber: imotor-api/imotor/device/api/v1/device/alarm/returnDeviceNumber?tenantId=21323&tenantType=1
+
+paload_returnDeviceNumber:
+  tenantId: 21324
+  tenantTpye: 1
+
+#断言
+alarmStatus: 0
+
+
+
+#=====================================================================================================================
+
+#工单类型统计-queryWorkTypeNum
+queryWorkTypeNum: admin账号登录查看----工单类型统计-queryWorkTypeNum
+api_queryWorkTypeNum: imotor-api/imotor/device/api/v1/device/work/queryWorkTypeNum?tenantId=21323&tenantType=1
+
+
+#断言
+data: None
+
+
+
+
+#=====================================================================================================================
+
+#综合健康评分-score
+score: admin账号登录查看----综合健康评分
+api_score: imotor-api/imotor/device/api/v1/synthese/health/score?tenantId=21323&tenantType=1
+
+
+#断言
+logo: None
+
+
+
+#=====================================================================================================================
+
+#企业综合健康评分-score/21323
+Enterprise_score: admin账号登录查看----企业综合健康评分
+api_Enterprise_score: imotor-api/imotor/device/api/v1/synthese/health/score/21323?tenantId=21323&tenantType=1
+
+
+#断言
+data_score: None
+
+
+#=====================================================================================================================
+#维保概览首页展示-indexMain
+indexMain: admin账号登录查看----维保概览首页展示
+api_indexMain: imotor-api/imotor/device/api/v1/device/maintain/indexMain?tenantId=21323&tenantType=1
+paload_indexMain:
+  pageNum: 1
+  pageSize: 1
+
+#断言
+zeroToThree: None
+
+
+
+
+#=====================================================================================================================
+#综合健康指数排名-ranking
+ranking: admin账号登录查看----综合健康指数排名
+api_ranking: imotor-api/imotor/device/api/v1/synthese/health/ranking
+paload_ranking:
+  pageNum: 1
+  pageSize: 10
+  isAsc: asc
+  orderByColumn: score
+  nodeId: undefined
+  tenantId: 21323
+  tenantType: 1
+
+#断言
+enterpriseName: 杭州适享科技有限公司
+
+
+
+
+#=====================================================================================================================
+#设备健康排名-ranking
+device_ranking: admin账号登录查看----设备健康排名
+api_device_ranking: imotor-api/imotor/device/api/v1/device/health/ranking
+paload_device_ranking:
+  pageNum: 1
+  pageSize: 5
+  isAsc: asc
+  orderByColumn: score
+  tenantId: 21323
+  tenantType: 1
+
+#断言
+pages: 1
+
+
+
+
+
+#=====================================================================================================================
+#报警详情列表页-alarmRecordInfo
+alarmRecordInfo: admin账号登录查看----报警详情列表页
+api_alarmRecordInfo: imotor-api/imotor/device/api/v1/device/alarm/alarmRecordInfo?tenantId=21323&tenantType=1
+paload_alarmRecordInfo:
+  pageNum: 1
+  pageSize: 10
+  processStatus: 0
+  isFalg: true
+
+#断言
+current: 1
+
+
+
+
+#=====================================================================================================================
+#获取默认视角-getDefaultView
+getDefaultView: admin账号登录查看----获取默认视角
+api_getDefaultView: imotor-api/imotor/user/api/v1/view/getDefaultView?tenantId=21323&tenantType=1
+
+
+#断言
+datas: 25.04,121.5144
+
+
+
+#=====================================================================================================================
+#获取用户组件信息-info?level=1
+info: admin账号登录查看----获取用户组件信息
+api_info: imotor-api/imotor/user/api/v1/user/component/info?level=1&tenantId=21323&tenantType=1
+paload_info:
+  level: 1
+  tenantId: 21323
+  tenantType: 1
+
+#断言
+level: 1
+
+
+
+#=====================================================================================================================
+#获取获取客户列表
+list: admin账号登录查看----获取用户组件信息
+api_list: imotor-api/imotor/user/api/v1/enterprise/list?tenantId=21323&tenantType=1
+
+
+#断言
+enterpriseNamedatas: 杭州适享科技有限公司

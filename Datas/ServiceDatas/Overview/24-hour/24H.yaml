@@ -1,0 +1,23 @@
+#24小时报警详情页统计-alarmNumStatisticsTwentyFour
+alarmNumStatisticsTwentyFour: admin账号登录查看----24小时报警详情页统计
+api_alarmNumStatisticsTwentyFour: imotor-api/imotor/device/api/v1/device/alarm/alarmNumStatisticsTwentyFour?tenantId=21323&tenantType=1
+
+#断言
+alarmStatusDesc: High data
+
+
+
+
+#================================================================================================================================================
+#24小时报警详情页趋势图-alarmNumListTwentyFour
+alarmNumListTwentyFour: admin账号登录查看----24小时报警详情页趋势图
+api_alarmNumListTwentyFour: imotor-api/imotor/device/api/v1/device/alarm/alarmNumListTwentyFour?tenantId=21323&tenantType=1
+
+paload:
+  dateFlag: true
+  nodeId:
+  startTime:
+  endTime:
+
+#断言
+lowAlarmTwentyFour: 1

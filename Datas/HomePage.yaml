@@ -1,0 +1,96 @@
+#==========================================================================================================================================
+#首页--设备概览统计
+deviceIotStatistics: admin账号登录查看首页---设备概览接口
+api_deviceIotStatistics: imotor-api/imotor/device/api/v1/device/deviceIotStatistics
+
+paload:
+  enterpriseId: 21324
+  nodeId: 1226
+
+#断言
+data:
+  total: 3
+
+#==========================================================================================================================================
+
+#首页---获取企业列表报警查询
+AlarmInfo: admin账号登录查看首页---企业列表报警查询接口
+api_AlarmInfo: imotor-api/imotor/device/api/v1/operational/getEnterpriseAlarmInfo
+#断言
+data_name: 杭州适享科技有限公司
+
+
+#==========================================================================================================================================
+
+#首页---大屏列表下拉查询企业/服务
+getNodeTree: admin账号登录查看首页---大屏列表下拉查询企业/服务
+api_getNodeTree: imotor-api/imotor/device/api/v1/operational/getNodeTree
+#断言
+data_name_01: 杭州适享科技有限公司
+
+
+
+
+#==========================================================================================================================================
+
+#首页---查询用户历史搜索关键字
+query: admin账号登录查看首页---查询用户历史搜索关键字
+api_query: imotor-api/imotor/device/api/v1/usersearch/query
+#断言
+data_id: 128
+
+
+#==========================================================================================================================================
+
+#首页---查询服务商、企业位置信息
+getScreenPostionInfo: admin账号登录查看首页---查询服务商、企业位置信息
+api_getScreenPostionInfo: imotor-api/imotor/device/api/v1/operational/getScreenPostionInfo
+#断言
+name: 杭州适享科技有限公司
+
+
+
+#==========================================================================================================================================
+
+#首页---实时看板
+realPlate: admin账号登录查看首页---查询服务商、企业位置信息
+api_realPlate: imotor-api/imotor/device/api/v1/operational/realPlate/1
+#断言
+providerNumChain: null
+
+
+
+#==========================================================================================================================================
+
+#首页---接入数量
+enterAndDeviceNum: admin账号登录查看首页---接入数量
+api_enterAndDeviceNum: imotor-api/imotor/device/api/v1/operational/enterAndDeviceNum
+#断言
+msg: null
+
+
+#==========================================================================================================================================
+
+#首页---采集终端数列表
+list: admin账号登录查看首页---采集终端数列表
+api_list: imotor-api/imotor/device/api/v1/device/list
+
+paload_list:
+  pageNum: 1
+  pageSize: 10
+
+#断言
+enterpriseName: 舜云互联
+
+
+
+
+
+
+
+
+
+
+
+
+

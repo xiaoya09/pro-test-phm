@@ -1,0 +1,30 @@
+#工单类型统计-queryWorkTypeNum
+queryWorkTypeNum: admin账号登录查看---工单类型统计
+api_queryWorkTypeNum: imotor-api/imotor/device/api/v1/device/work/queryWorkTypeNum?tenantId=21323&tenantType=1
+
+#断言
+data: None
+
+#=====================================================================================================================
+#工单数据统计-AllData
+AllData: admin账号登录查看---工单数据统计
+api_AllData: imotor-api/imotor/device/api/v1/device/work/AllData?tenantId=21323&tenantType=1
+
+#断言
+allPlan: 0
+
+
+
+#=====================================================================================================================
+#运维列表及服务评价
+list: admin账号登录查看---运维列表及服务评价
+api_list: imotor-api/imotor/device/api/v1/device/work/list?tenantId=21323&tenantType=1
+
+paload:
+  pageNum: 1
+  pageSize: 10
+  actualEndTime: 1
+  beginTime:
+  endTime:
+#断言
+pages: 0

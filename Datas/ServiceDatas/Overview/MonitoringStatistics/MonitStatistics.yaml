@@ -1,0 +1,26 @@
+#设备概览详情页趋势图-statusNumList
+statusNumList: admin账号登录查看----设备概览详情页趋势图
+api_statusNumList: imotor-api/imotor/device/api/v1/device/statusNumList?tenantId=21323&tenantType=1
+paload: {}
+#断言
+enterpriseId: 21324
+
+
+
+
+#===========================================================================================================================
+#获取客户下拉框列表-optionselect
+optionselect: admin账号登录查看----获取客户下拉框列表
+api_optionselect: imotor-api/imotor/user/api/v1/enterprise/optionselect?tenantId=21323&tenantType=1
+#断言
+enterpriseName: 杭州适享科技有限公司
+
+
+
+
+#===========================================================================================================================
+#查询设备所有分类列表-allList
+allList: admin账号登录查看---查询设备所有分类列表
+api_allList: imotor-api/imotor/device/api/v1/device/type/allList?tenantId=21323&tenantType=1
+#断言
+createBy: imotor_server

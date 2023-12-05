@@ -1,0 +1,58 @@
+#待处理报告列表-list
+list: admin账号登录查看----待处理报告列表-list
+api_list: imotor-api/imotor/device/api/v1/diagnostic/expert/pending/list
+
+paload:
+  pageNum: 1
+  pageSize: 10
+  handleStatus: 0
+  type: [0]
+  requestExpert:
+  isAsc: desc
+  orderByColumn: demand_time
+
+#断言
+enterpriseName: 钉钉(中国)信息技术有限公司
+
+#=====================================================================================================================
+
+#未来一月统计待处理报告-statisticsFutureReport
+statisticsFutureReport: admin账号登录查看----未来一月统计待处理报告-statisticsFutureReport
+api_statisticsFutureReport: imotor-api/imotor/device/api/v1/diagnostic/expert/statisticsFutureReport
+#断言
+num: 1
+
+
+#=====================================================================================================================
+#企业名称下拉选择-optionselect
+optionselect: admin账号登录查看----企业名称下拉选择
+api_optionselect: imotor-api/imotor/user/api/v1/enterprise/optionselect
+#断言
+enterpriseId: 21324
+
+
+
+#=====================================================================================================================
+#报告规则设置列表-list
+rule_list: admin账号登录查看----报告规则设置列表-list
+api_rule_list: imotor-api/imotor/device/api/v1/diagnostic/reportrule/list
+paload_rule:
+  pageSize: 10
+  pageNum: 1
+#断言
+record_enterpriseName: 杭州适享科技有限公司
+
+
+#=====================================================================================================================
+#设置报告规则-addOrUpdateReportRule
+addOrUpdateReportRule: admin账号登录查看---设置报告规则-addOrUpdateReportRule
+api_addOrUpdateReportRule: imotor-api/imotor/device/api/v1/diagnostic/reportrule/addOrUpdateReportRule
+paload_add:
+  enterpriseId: 21324
+  nodeId: 1226
+  isExpertService: 1
+  isReport: 1
+  reportDay: 5
+#断言
+data: True
+

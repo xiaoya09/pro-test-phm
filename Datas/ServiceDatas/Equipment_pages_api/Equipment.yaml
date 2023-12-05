@@ -1,0 +1,41 @@
+#设备是否装置--isEquipment
+isEquipment: admin账号登录查看----设备是否装置
+api_isEquipment: imotor-api/imotor/device/api/v1/devicenew/isEquipment?tenantId=21323&tenantType=1
+#断言
+equipment: True
+
+
+
+#===========================================================================================================================
+
+#查看部位信息:测点，过滤波形--detail
+detail: admin账号登录查看----查看部位信息:测点，过滤波形
+api_detail: imotor-api/imotor/device/api/v1/devicePoint/detail?tenantId=21323&tenantType=1
+paload:
+  id: 67007
+#断言
+bw_id: 67007
+
+
+
+#===========================================================================================================================
+
+#查看部位信息-趋势预警-detailByTren
+detailByTren: admin账号登录查看----查看部位信息-趋势预警
+api_detailByTren: imotor-api/imotor/device/api/v1/devicePoint/detailByTrend?tenantId=21323&tenantType=1
+paload_bw:
+  id: 67007
+#断言
+terend_bw_id: 67007
+
+
+#===========================================================================================================================
+
+#查看测点详情--detailPoint
+detailPoint: admin账号登录查看----查看测点详情
+api_detailPoint: imotor-api/imotor/device/api/v1/devicePoint/detailPoint?tenantId=21323&tenantType=1
+paload_pointId:
+  pointId: 67007
+#断言
+pointId: 67007
+

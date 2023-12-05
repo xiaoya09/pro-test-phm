@@ -1,0 +1,87 @@
+
+#==========================================================================================================================================
+#登录测试数据--正常登录
+
+- title: 正常登录
+#
+##登录路径
+  login_url: imotor-api/imotor/oauth/token
+#登录接口参数---正常登录
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+  paload:
+    client_id: imotor
+    client_secret: 123
+    platform: imotor-member
+    username: admin
+    password: 3iSllmCPeWWy/fRMOmKb4e1mfuI8Bhb/ekmf5n/c2C06Xs2IEL6r6X3JqvDFDvid+XGRDqrvtYCVcZQRoFgMQA==
+    code: V587
+    uuid: 305e8778ee464829ac8fb1d06410a673
+    grant_type: password
+#断言
+  msg: null
+
+
+
+#==========================================================================================================================================
+- title: 异常登录--账号错误
+#登录路径
+  login_url: imotor-api/imotor/oauth/token
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+#异常登录
+  paload:
+    client_id: imotor
+    client_secret: 123
+    platform: imotor-member
+    username: admin1
+    password: 3iSllmCPeWWy/fRMOmKb4e1mfuI8Bhb/ekmf5n/c2C06Xs2IEL6r6X3JqvDFDvid+XGRDqrvtYCVcZQRoFgMQA==
+    code: V587
+    uuid: 305e8778ee464829ac8fb1d06410a673
+    grant_type: password
+#断言
+  msg: Incorrect username or password
+
+
+
+#==========================================================================================================================================
+- title: 异常登录--错误密码
+#登录路径
+  login_url: imotor-api/imotor/oauth/token
+#异常登录
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+  paload:
+    client_id: imotor
+    client_secret: 123
+    platform: imotor-member
+    username: admin
+    password: 3iSl
+    code: V587
+    uuid: 305e8778ee464829ac8fb1d06410a673
+    grant_type: password
+#断言
+  msg: Incorrect username or password
+
+
+
+
+
+
+- title: 异常登录--错误验证码
+#登录路径
+  login_url: imotor-api/imotor/oauth/token
+#异常登录
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+  paload:
+    client_id: imotor
+    client_secret: 123
+    platform: imotor-member
+    username: admin
+    password: 3iSllmCPeWWy/fRMOmKb4e1mfuI8Bhb/ekmf5n/c2C06Xs2IEL6r6X3JqvDFDvid+XGRDqrvtYCVcZQRoFgMQA==
+    code: V5871
+    uuid: 305e8778ee464829ac8fb1d06410a673
+    grant_type: password
+#断言
+  msg: Verification code invalid

@@ -1,0 +1,17 @@
+#健康问题词云-cloud
+cloud: admin账号登录查看---健康问题词云
+api_cloud: imotor-api/imotor/device/api/v1/synthese/health/world/cloud?tenantId=21323&tenantType=1
+
+#断言
+name: 垂直速度有效值 Alarm
+
+#=====================================================================================================================
+#设备健康列表-list
+list: admin账号登录查看---设备健康列表
+api_list: imotor-api/imotor/device/api/v1/device/health/list?tenantId=21323&tenantType=1
+
+#断言
+current: 1
+
+
+

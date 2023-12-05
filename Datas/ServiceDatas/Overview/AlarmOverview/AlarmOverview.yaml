@@ -1,0 +1,12 @@
+#报警概览详情页趋势图-alarmNumList
+alarmNumList: admin账号登录查看----报警概览详情页趋势图
+api_alarmNumList: imotor-api/imotor/device/api/v1/device/alarm/alarmNumList?tenantId=21323&tenantType=1
+paload:
+  startTime:
+  endTime:
+  nodeId:
+#断言
+enterpriseId: 21324
+
+
+
