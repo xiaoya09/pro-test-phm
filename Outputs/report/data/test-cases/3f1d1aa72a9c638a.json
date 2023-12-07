@@ -1,0 +1,129 @@
+{
+  "uid" : "3f1d1aa72a9c638a",
+  "name" : "test_queryPoint",
+  "fullName" : "TestCases.test_Services.test_Equipment_monitor.test_Report.test_report.Test_Report#test_queryPoint",
+  "historyId" : "1506da61a004b6dd4fabc9f6cd3cb0cf",
+  "time" : {
+    "start" : 1701844293234,
+    "stop" : 1701844294256,
+    "duration" : 1022
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "cleal_Datas",
+    "time" : {
+      "start" : 1701844292312,
+      "stop" : 1701844292924,
+      "duration" : 612
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "environ",
+    "time" : {
+      "start" : 1701844292312,
+      "stop" : 1701844292312,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1701844292068,
+      "stop" : 1701844292312,
+      "duration" : 244
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "c49e594cbadaeab5",
+      "name" : "log",
+      "source" : "c49e594cbadaeab5.txt",
+      "type" : "text/plain",
+      "size" : 4051
+    }, {
+      "uid" : "e90b7797d2158ae3",
+      "name" : "stderr",
+      "source" : "e90b7797d2158ae3.txt",
+      "type" : "text/plain",
+      "size" : 4120
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "诊断报告"
+  }, {
+    "name" : "story",
+    "value" : "查询设备测点"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases.test_Services.test_Equipment_monitor.test_Report"
+  }, {
+    "name" : "suite",
+    "value" : "test_report"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Report"
+  }, {
+    "name" : "host",
+    "value" : "lsk"
+  }, {
+    "name" : "thread",
+    "value" : "45196-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_Services.test_Equipment_monitor.test_Report.test_report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3f1d1aa72a9c638a.json",
+  "parameterValues" : [ ]
+}

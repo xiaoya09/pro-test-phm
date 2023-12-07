@@ -1,5 +1,5 @@
 #==========================================================================================================================================
-#首页--设备概览统计
+title: 首页--设备概览统计
 deviceIotStatistics: admin账号登录查看首页---设备概览接口
 api_deviceIotStatistics: imotor-api/imotor/device/api/v1/device/deviceIotStatistics
 
@@ -8,12 +8,10 @@ paload:
   nodeId: 1226
 
 #断言
-data:
-  total: 3
+total: 3
 
 #==========================================================================================================================================
 
-#首页---获取企业列表报警查询
 AlarmInfo: admin账号登录查看首页---企业列表报警查询接口
 api_AlarmInfo: imotor-api/imotor/device/api/v1/operational/getEnterpriseAlarmInfo
 #断言
@@ -56,7 +54,7 @@ name: 杭州适享科技有限公司
 realPlate: admin账号登录查看首页---查询服务商、企业位置信息
 api_realPlate: imotor-api/imotor/device/api/v1/operational/realPlate/1
 #断言
-providerNumChain: null
+providerNumChain: None
 
 
 
@@ -66,7 +64,7 @@ providerNumChain: null
 enterAndDeviceNum: admin账号登录查看首页---接入数量
 api_enterAndDeviceNum: imotor-api/imotor/device/api/v1/operational/enterAndDeviceNum
 #断言
-msg: null
+msg: None
 
 
 #==========================================================================================================================================

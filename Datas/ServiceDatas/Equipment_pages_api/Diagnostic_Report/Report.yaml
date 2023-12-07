@@ -1,0 +1,41 @@
+#诊断报告列表
+listReport: admin账号登录查看---诊断报告列表
+api_listReport: imotor-api/imotor/device/api/v1/diagnostic/listReport
+
+pload:
+  deviceId: &deviceid 14010
+  pageNum: 1
+  pageSize: 10
+  isAsc: desc
+  orderByColumn: mr.create_time
+#断言
+size: 10
+
+
+
+#===========================================================================================================================
+#查询设备测点
+queryPoint: admin账号登录查看---查询设备测点
+api_queryPoint: imotor-api/imotor/device/api/v1/devicePoint/device/queryPoint
+
+ploads:
+  deviceId: *deviceid
+
+#断言
+deviceId: *deviceid
+
+
+
+#===========================================================================================================================
+#生成诊断报告--report
+report: admin账号登录查看---生成诊断报告
+api_report: imotor-api/imotor/task/api/v1/diagnostic/generate/report
+
+pload01:
+  deviceId: *deviceid
+  startTime:
+  endTime:
+  uniqueId:
+
+#断言
+deviceId1: *deviceid

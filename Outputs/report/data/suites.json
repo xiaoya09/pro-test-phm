@@ -1,0 +1,43 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "TestCases.test_Services.test_Equipment_monitor.test_Report",
+    "children" : [ {
+      "name" : "test_report",
+      "children" : [ {
+        "name" : "Test_Report",
+        "children" : [ {
+          "name" : "test_listReport",
+          "uid" : "c218471377f97afa",
+          "parentUid" : "538077f251d063de0ff16220a5357685",
+          "status" : "passed",
+          "time" : {
+            "start" : 1701844292925,
+            "stop" : 1701844293228,
+            "duration" : 303
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_queryPoint",
+          "uid" : "3f1d1aa72a9c638a",
+          "parentUid" : "538077f251d063de0ff16220a5357685",
+          "status" : "passed",
+          "time" : {
+            "start" : 1701844293234,
+            "stop" : 1701844294256,
+            "duration" : 1022
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "538077f251d063de0ff16220a5357685"
+      } ],
+      "uid" : "541eda58f60481a4a71da55a9901866d"
+    } ],
+    "uid" : "af273cf1802a60d9369dd705b8fd3fe0"
+  } ]
+}

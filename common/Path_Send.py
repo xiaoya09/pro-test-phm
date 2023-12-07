@@ -10,7 +10,7 @@ TestCase=os.path.join(daseDir,r"TestCases\Test_Login\test_login.py")
 
 
 #测试报告路径
-Outputs=os.path.join(daseDir,r"reports\tmp")
+Outputs=os.path.join(daseDir,r"Outputs\tmp")
 
 #日志路径
 Outputslog=os.path.join(daseDir,"logs")
@@ -21,6 +21,9 @@ configpath=os.path.join(daseDir,"config\config_profile.ini")
 
 #配置yaml文件路径
 configYaml=os.path.join(daseDir,"Datas")
+
+#配置token.yaml文件路径
+TokenYamlPath=os.path.join(daseDir,r"token.yaml")
 
 
 

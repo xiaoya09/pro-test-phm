@@ -1,6 +1,5 @@
 import requests
 from common.Loggoing import LoggerUtil
-from common.Delet_logs import DeletLog
 #将不同的请求方式单独封装起来，便于调用
 
 class Request:
@@ -34,6 +33,21 @@ class Request:
         self.respones = requests.post(url, json,**kwargs)
         LoggerUtil().create_log().info("响应数据{}".format(self.respones.text))
         return self.respones
+
+
+
+
+    #put请求方式，传参格式要求是json形式：application/json
+    def put_requests(self,url,json=None,**kwargs):
+
+        LoggerUtil().create_log().info("请求地址：{}".format(url))
+        LoggerUtil().create_log().info("请求数据{}".format(json))
+        self.respones = requests.put(url, json,**kwargs)
+        LoggerUtil().create_log().info("响应数据{}".format(self.respones.text))
+        return self.respones
+
+
+
 
 
 # if __name__ == '__main__':

@@ -14,6 +14,12 @@ class Yaml_data:
 
 
 
+    def clear_yaml(self,filepath):
+        with open(filepath,encoding="utf-8",mode="w") as fs:
+            fs.truncate()
+
+
+
 
 
 if __name__ == '__main__':

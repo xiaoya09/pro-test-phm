@@ -1,0 +1,95 @@
+#未读数量汇总
+getRecordCount: admin账号登录查看---未读数量汇总
+api_getRecordCount: imotor-api/imotor/device/api/v1/message/getRecordCount
+
+
+pload:
+  deviceId: &deviceid 14010
+#断言
+processStatus: 0
+
+
+
+#===========================================================================================================================
+#未通报
+info: admin账号登录查看---未通报
+api_info: imotor-api/imotor/device/api/v1/device/alarm/info
+
+pload_data:
+  processStatus: 0
+  deviceId: *deviceid
+  pageNum: 1
+  pageSize: 10
+  orderByColumn: a.create_time
+  isAsc: Desc
+
+#断言
+providerId: 21323
+
+
+
+
+#===========================================================================================================================
+#处理报警状态
+handleProcessStatus: admin账号登录查看---处理报警状态
+api_handleProcessStatus: imotor-api/imotor/device/api/v1/device/alarm/handleProcessStatus
+
+
+#断言
+data: 1
+
+
+
+#===========================================================================================================================
+#已通报
+info01: admin账号登录查看---已通报
+api_info01: &info imotor-api/imotor/device/api/v1/device/alarm/info
+
+pload_datas:
+  processStatus: 1
+  deviceId: *deviceid
+  pageNum: 1
+  pageSize: 10
+  orderByColumn: a.create_time
+  isAsc: Desc
+
+#断言
+size: 10
+
+
+#===========================================================================================================================
+#已忽略
+info02: admin账号登录查看---已忽略
+api_info02: *info
+
+pload_datas01:
+  processStatus: 2
+  deviceId: *deviceid
+  pageNum: 1
+  pageSize: 10
+  orderByColumn: a.create_time
+  isAsc: Desc
+
+#断言
+size01: 10
+
+
+
+#===========================================================================================================================
+#已恢复
+info03: admin账号登录查看---已恢复
+api_info03: *info
+
+pload_datas02:
+  processStatus: 3
+  deviceId: *deviceid
+  pageNum: 1
+  pageSize: 10
+  orderByColumn: a.create_time
+  isAsc: Desc
+
+#断言
+size02: 10
+
+
+

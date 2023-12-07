@@ -1,31 +1,22 @@
 import pytest
-from common.YamlData import Yaml_data
 from common.GetToken import GetToken
+from common.Path_Send import TokenYamlPath
+from common.YamlData import Yaml_data
 
-
-@pytest.fixture(scope='session')
-def cleal_Datas():
-    """
-    登录前先清理之前测试用例产生的日志数据，再清理之前保存token的yaml文件，然后重新生成新的token
-    :return:
-    """
-    from common.ConfigSend import conf
-    from common.Delet_logs import DeletLog
-    #先清理日志文件
-    delete_files=DeletLog("D:\pythonProject\pro-test-phm\logs")
-    delete_files.delet_file()
-
-    #删除Token.yaml中之前保存的token数据
-    tokenYaml=Yaml_data().read_yaml(conf.get('set',"TokenYaml"))
-    del tokenYaml["phm"]
-
-    #获取新的token并写入到Token.yaml中
-    token=GetToken().test_token()
-    Yaml_data().write_yaml(conf.get('set',"TokenYaml"), {"phm": token})
+@pytest.fixture(scope="session",autouse=True)
+def get_token():
+    #先清理token.yaml中之前存得token值
+    Yaml_data().clear_yaml(TokenYamlPath)
+    #获取新的toke值
+    newToken=GetToken().test_token()
+    #将新的值写入token.yaml
+    Yaml_data().write_yaml(TokenYamlPath, {"phm":newToken })
 
 
 
 def read_token_yaml():
-    from common.ConfigSend import conf
-    phmToken = Yaml_data().read_yaml(conf.get('set',"TokenYaml"))
-    return phmToken["phm"]
+    #读取新的token值
+    readYaml=Yaml_data().read_yaml(TokenYamlPath)
+    phmTkone=readYaml["phm"]
+    return phmTkone
+

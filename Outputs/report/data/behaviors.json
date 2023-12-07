@@ -1,0 +1,43 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "诊断报告",
+    "children" : [ {
+      "name" : "诊断报告列表",
+      "children" : [ {
+        "name" : "test_listReport",
+        "uid" : "c218471377f97afa",
+        "parentUid" : "e6bd11b430ec7e5455b0818414178f80",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701844292925,
+          "stop" : 1701844293228,
+          "duration" : 303
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e6bd11b430ec7e5455b0818414178f80"
+    }, {
+      "name" : "查询设备测点",
+      "children" : [ {
+        "name" : "test_queryPoint",
+        "uid" : "3f1d1aa72a9c638a",
+        "parentUid" : "f2be7cc1b3e284b12b6016a76271a376",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701844293234,
+          "stop" : 1701844294256,
+          "duration" : 1022
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f2be7cc1b3e284b12b6016a76271a376"
+    } ],
+    "uid" : "c6fa39f82d37524ada0f5ca93346d0e7"
+  } ]
+}

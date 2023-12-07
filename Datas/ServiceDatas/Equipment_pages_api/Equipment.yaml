@@ -12,9 +12,9 @@ equipment: True
 detail: admin账号登录查看----查看部位信息:测点，过滤波形
 api_detail: imotor-api/imotor/device/api/v1/devicePoint/detail?tenantId=21323&tenantType=1
 paload:
-  id: 67007
+  id: &id 67007
 #断言
-bw_id: 67007
+bw_id: *id
 
 
 
@@ -24,9 +24,9 @@ bw_id: 67007
 detailByTren: admin账号登录查看----查看部位信息-趋势预警
 api_detailByTren: imotor-api/imotor/device/api/v1/devicePoint/detailByTrend?tenantId=21323&tenantType=1
 paload_bw:
-  id: 67007
+  id: *id
 #断言
-terend_bw_id: 67007
+terend_bw_id: *id
 
 
 #===========================================================================================================================
@@ -35,7 +35,274 @@ terend_bw_id: 67007
 detailPoint: admin账号登录查看----查看测点详情
 api_detailPoint: imotor-api/imotor/device/api/v1/devicePoint/detailPoint?tenantId=21323&tenantType=1
 paload_pointId:
-  pointId: 67007
+  pointId: *id
 #断言
-pointId: 67007
+pointId: *id
+
+
+
+
+#===========================================================================================================================
+
+#查看设备类型
+device_base_host_type: admin账号登录查看----查看设备类型
+api_device_base_host_type: imotor-api/imotor/user/api/v1/dict/data/type/device_base_host_type?tenantId=21323&tenantType=1
+
+#断言
+createBy: admin
+
+
+
+
+#===========================================================================================================================
+
+#查看设备基础信息
+device_base_flexibility: admin账号登录查看----查看设备基础信息
+api_device_base_flexibility: imotor-api/imotor/user/api/v1/dict/data/type/device_base_flexibility?tenantId=21323&tenantType=1
+
+#断言
+createBy_device: admin
+
+
+
+#===========================================================================================================================
+
+#查看诊断报告支持的设备类型
+pump_type_list: admin账号登录查看----查看诊断报告支持的设备类型
+api_pump_type_list: imotor-api/imotor/device/api/v1/envConfig/getAEnvConfig/pump_type_list?tenantId=21323&tenantType=1
+
+#断言
+remarks: 诊断报告支持设备类型id
+
+
+
+
+#===========================================================================================================================
+
+#查看设备洞察节点列表
+nodeDeviceListDataAuth: admin账号登录查看----查看设备洞察节点列表
+api_nodeDeviceListDataAuth: imotor-api/imotor/device/api/v1/node/nodeDeviceListDataAuth?tenantId=21323&tenantType=1
+
+#断言
+nodeName: 工厂测试
+
+
+
+
+
+#===========================================================================================================================
+
+#设备详情（机器大脑）
+main: admin账号登录查看----查看设备详情（机器大脑）
+api_main: imotor-api/imotor/device/api/v1/device/detail/main?tenantId=21323&tenantType=1
+
+#断言
+createBy_main: shixiangkeji
+
+
+
+
+
+#===========================================================================================================================
+
+#设备健康分数--healthCondition
+healthCondition: admin账号登录查看----设备健康分数
+api_healthCondition: imotor-api/imotor/device/api/v1/devicenew/dataCenter/healthCondition?deviceId=14010&tenantId=21323&tenantType=1
+
+#断言
+deviceId: &deviceid 14010
+
+
+
+
+
+#===========================================================================================================================
+
+#设备测点，查询有测点的部位
+queryPointByDeviceId: admin账号登录查看----设备测点，查询有测点的部位
+api_queryPointByDeviceId: imotor-api/imotor/device/api/v1/devicePoint/queryPointByDeviceId?tenantId=21323&tenantType=1
+
+paload_pointd:
+  deviceId: *deviceid
+#断言
+createBy_name: shixiangkeji
+
+
+
+
+#===========================================================================================================================
+
+#查询设备图片-img/14010
+img: admin账号登录查看----查询设备图片
+api_img: imotor-api/imotor/device/api/v1/device/img/14010?tenantId=21323&tenantType=1
+
+#断言
+deviceId_01: *deviceid
+
+
+
+
+#===========================================================================================================================
+
+#设备开机率
+operationRate: admin账号登录查看----设备开机率
+api_operationRate: imotor-api/imotor/device/api/v1/device/operationRate?tenantId=21323&tenantType=1
+
+data:
+  id: *deviceid
+
+#断言
+msg: 操作成功
+
+
+
+
+
+#===========================================================================================================================
+
+#设备洞察趋势图，高低报时间
+getAlarmDate: admin账号登录查看----设备洞察趋势图，高低报时间
+api_getAlarmDate: imotor-api/imotor/device/api/v1/device/getAlarmDate/14010?tenantId=21323&tenantType=1
+
+#断言
+alarmStatus: 1
+
+
+
+
+#===========================================================================================================================
+
+#报警分页展示
+info: admin账号登录查看----报警分页展示
+api_info: imotor-api/imotor/device/api/v1/device/alarm/info?tenantId=21323&tenantType=1
+
+paload_json:
+  pageNum: 1
+  pageSize: 10
+  deviceId: *deviceid
+  orderByColumn: create_time
+  isAsc: Desc
+  processStatus: 0
+#断言
+enterpriseName01: 杭州适享科技有限公司
+
+
+
+
+
+#===========================================================================================================================
+
+#设备健康评分
+health: admin账号登录查看----设备健康评分
+api_health: imotor-api/imotor/device/api/v1/device/health/14010?tenantId=21323&tenantType=1
+
+#断言
+deviceId02: *deviceid
+
+
+
+
+
+
+#===========================================================================================================================
+
+#默认显示设备测点时间段趋势图带报警数据
+getDevicePointTimeSlotAndAlarmDefault: admin账号登录查看---默认显示设备测点时间段趋势图带报警数据
+api_getDevicePointTimeSlotAndAlarmDefault: imotor-api/imotor/device/api/v1/device/getDevicePointTimeSlotAndAlarmDefault?tenantId=21323&tenantType=1
+
+
+pload_device:
+  deviceId: *deviceid
+#断言
+iotId: 1810
+
+
+
+
+#===========================================================================================================================
+
+#添加诊断结论--add
+add: admin账号登录查看---添加诊断结论--add
+api_add: imotor-api/imotor/device/api/v1/diagnostic/diagnostic/conclusion/add?tenantId=21323&tenantType=1
+
+paload_id:
+  id: *deviceid
+#断言
+datas: None
+
+
+
+
+
+#===========================================================================================================================
+
+#装置趋势图---pointTrend
+pointTrend: admin账号登录查看---装置趋势图
+api_pointTrend: imotor-api/imotor/device/api/v1/devicenew/dataCenter/pointTrend?tenantId=21323&tenantType=1
+
+paload_devices:
+  deviceId: *deviceid
+#断言
+unit: gE
+
+
+
+
+#===========================================================================================================================
+
+#获取数据中台请求签名
+signature: admin账号登录查看---获取数据中台请求签名
+api_signature: imotor-api/imotor/device/api/v1/devicenew/dataCenter/signature?tenantId=21323&tenantType=1
+
+
+#断言
+msg01: None
+
+
+
+
+#===========================================================================================================================
+
+#回显自定义测点
+getPointCustom: admin账号登录查看---回显自定义测点
+api_getPointCustom: imotor-api/imotor/device/api/v1/devicePoint/getPointCustom?tenantId=21323&tenantType=1
+
+paload_device01:
+  deviceId: *deviceid
+
+#断言
+id: None
+
+
+
+#===========================================================================================================================
+
+#编辑图片打点
+url: https://web-base-test.imotorlinx.cn/api/metaverse/business/iot/device/edit?tenantId=21323&tenantType=1
+edit: admin账号登录查看---编辑图片打点
+paload_device02:
+  imageConfig: https://shunos-iot-test.oss-cn-qingdao.aliyuncs.com/dm/21324/e9a0bea3679245018cdcd94fd1fad7a6.jpg
+  mainImg: https://shunos-iot-test.oss-cn-qingdao.aliyuncs.com/dm/21324/e9a0bea3679245018cdcd94fd1fad7a6.jpg
+  iotDeviceId: 1719620333834731520
+#断言
+data2: None
+
+
+
+
+#===========================================================================================================================
+
+#新增或编辑自定义测点
+addPointCustom: admin账号登录查看---新增或编辑自定义测点
+api_addPointCustom: imotor-api/imotor/device/api/v1/devicePoint/addPointCustom?tenantId=21323&tenantType=1
+
+paload_device03:
+  deviceId: 13997
+  userId: 10827
+  unionGrad: null
+#断言
+data3: None
+
+
+
 
