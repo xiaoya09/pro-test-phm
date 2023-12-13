@@ -1,0 +1,4 @@
+[32m2023-12-07 10:45:03,659设备健康管理（PHM)日志控制台INFOtest_Equipment_Pages_api.py-155:开始运行查询设备图片-img测试用例：admin账号登录查看----查询设备图片[0m
+[32m2023-12-07 10:45:03,660设备健康管理（PHM)日志控制台INFOSendRequests.py-10:请求地址：https://web-pro-test.imotorlinx.cn/imotor-api/imotor/device/api/v1/device/img/14010?tenantId=21323&tenantType=1[0m
+[32m2023-12-07 10:45:03,660设备健康管理（PHM)日志控制台INFOSendRequests.py-11:请求数据None[0m
+[32m2023-12-07 10:45:04,023设备健康管理（PHM)日志控制台INFOSendRequests.py-13:响应数据{"metadata":{"path":"/api/v1/device/img/14010","httpStatusCode":200,"httpStatus":"OK","message":"GET /api/v1/device/img/14010 [200] OK","timestamp":1701917104},"code":200,"data":{"deviceId":14010,"deviceImgUrl":"https://shunos-iot-test.oss-cn-qingdao.aliyuncs.com/dm/21324/2598460e25304135b6b34a9fa0a63649.jpg","imgVOS":[]},"msg":null}[0m

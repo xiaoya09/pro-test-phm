@@ -1,0 +1,4 @@
+[32m2023-12-07 10:44:53,185设备健康管理（PHM)日志控制台INFOtest_Equipment_Pages_api.py-51:开始运行查看部位信息-趋势预警测试用例：admin账号登录查看----查看部位信息-趋势预警[0m
+[32m2023-12-07 10:44:53,186设备健康管理（PHM)日志控制台INFOSendRequests.py-20:请求地址：https://web-pro-test.imotorlinx.cn/imotor-api/imotor/device/api/v1/devicePoint/detailByTrend?tenantId=21323&tenantType=1[0m
+[32m2023-12-07 10:44:53,186设备健康管理（PHM)日志控制台INFOSendRequests.py-21:请求数据{'id': 67007}[0m
+[32m2023-12-07 10:44:53,560设备健康管理（PHM)日志控制台INFOSendRequests.py-23:响应数据{"metadata":{"path":"/api/v1/devicePoint/detailByTrend","httpStatusCode":200,"httpStatus":"OK","message":"POST /api/v1/devicePoint/detailByTrend [200] OK","timestamp":1701917093},"code":200,"data":{"id":67007,"deviceId":13968,"positionName":"电机非驱动端","point":[]},"msg":null}[0m

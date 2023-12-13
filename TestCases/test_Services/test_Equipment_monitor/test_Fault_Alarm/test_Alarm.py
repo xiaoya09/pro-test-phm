@@ -9,95 +9,131 @@ from TestCases.conftest import read_token_yaml
 
 Alarm_Path=os.path.join(configYaml+r'\ServiceDatas\Equipment_pages_api\FauitAlarm\Alarm.yaml')
 Alarm_PathDatas=Yaml_data().read_yaml(Alarm_Path)
-"""
-此测试类下的测试用例为大账号登录切换服务商进入设备监测--故障报警列表页
 
-"""
 
-@allure.title('报警故障列表')
+@allure.feature('报警故障列表')
 class Test_Alarm:
 
-    @allure.feature("获取未读数量汇总")
+    @allure.story("未读数量汇总")
+    @allure.severity("normal")
     def test_getRecordCount(self):
-        LoggerUtil().create_log().info("开始运行未读数量汇总测试用例：{}".format(Alarm_PathDatas["getRecordCount"]))
+        allure.dynamic.title("测试用例标题：%s" % (Alarm_PathDatas["getRecordCount"]))
         headers = {"Authorization": read_token_yaml()}
-        res = Request().get_requests(
+        with allure.step("第一步：发送get请求，接口地址：{}".format(conf.get("set", "test_url") +Alarm_PathDatas["api_getRecordCount"])):
+            res = Request().get_requests(
             conf.get("set", "test_url") + Alarm_PathDatas["api_getRecordCount"],data=Alarm_PathDatas["pload"],headers=headers)
-        res_dict = json.loads((res.text))
-        processStatus = jsonpath.jsonpath(res_dict, "$.data.alarmRecordReadList[*].processStatus")
-        assert Alarm_PathDatas["processStatus"] in processStatus
+        with allure.step("第二步：将接口返回的数据转化为json格式"):
+            res_dict = json.loads((res.text))
+        with allure.step("第三步：取出processStatus字段"):
+            processStatus = jsonpath.jsonpath(res_dict, "$.data.alarmRecordReadList[*].processStatus")
+        with allure.step("第四步：将取出来的processStatus字段与预期做断言"):
+            assert Alarm_PathDatas["processStatus"] in processStatus
 
 
 
+
+
+    @allure.story("未通报")
+    @allure.severity("normal")
     def test_info(self):
-        LoggerUtil().create_log().info("开始运行未通报测试用例：{}".format(Alarm_PathDatas["info"]))
+        allure.dynamic.title("测试用例标题：%s" % (Alarm_PathDatas["info"]))
         headers = {"Content-Type":"application/json","Authorization": read_token_yaml()}
-        res = Request().post_json_requests(
+        with allure.step("第一步：发送post请求，接口地址：{}".format(conf.get("set", "test_url") +Alarm_PathDatas["api_info"])):
+            res = Request().post_json_requests(
             conf.get("set", "test_url") + Alarm_PathDatas["api_info"],json=json.dumps(Alarm_PathDatas["pload"]),headers=headers)
-        res_dict = json.loads((res.text))
-        providerId=jsonpath.jsonpath(res_dict,"$.data.records[*].providerId")
-        assert Alarm_PathDatas["providerId"] in providerId
-        NoAlarm = jsonpath.jsonpath(res_dict, "$.data.records[0]")
-        return NoAlarm[0]
+        with allure.step("第二步：将接口返回的数据转化为json格式"):
+            res_dict = json.loads((res.text))
+        with allure.step("第三步：取出providerId字段"):
+            providerId=jsonpath.jsonpath(res_dict,"$.data.records[*].providerId")
+        with allure.step("第四步：将取出来的providerId字段与预期做断言"):
+            assert Alarm_PathDatas["providerId"] in providerId
+        with allure.step("第五步：取出列表第一个报警数据，然后返回出来，给handleProcessStatus接口做参数"):
+            NoAlarm = jsonpath.jsonpath(res_dict, "$.data.records[0]")
+            return NoAlarm[0]
 
 
 
 
+    @allure.story("处理报警状态")
+    @allure.severity("normal")
     def test_handleProcessStatus(self):
-        LoggerUtil().create_log().info("开始运行处理报警状态测试用例：{}".format(Alarm_PathDatas["handleProcessStatus"]))
+        allure.dynamic.title("测试用例标题：%s" % (Alarm_PathDatas["handleProcessStatus"]))
         headers = {"Content-Type":"application/json","Authorization": read_token_yaml()}
-        #从未通报的报警接口返回的数据，取一条报警数据，且将里面的reportButton的状态改为2
-        jsonDatas = self.test_info()
-        jsonDatas["reportButton"]=2
-        res = Request().post_json_requests(
+        with allure.step("第一步：从未通报的报警接口返回的数据，取一条报警数据，且将里面的reportButton的状态改为2"):
+            jsonDatas = self.test_info()
+            jsonDatas["reportButton"]=2
+        with allure.step("第二步：发送post请求，接口地址：{}".format(conf.get("set", "test_url") +Alarm_PathDatas["api_handleProcessStatus"])):
+            res = Request().post_json_requests(
             conf.get("set", "test_url") + Alarm_PathDatas["api_handleProcessStatus"],json=json.dumps(jsonDatas),headers=headers)
-        res_dict = json.loads((res.text))
-        datas = jsonpath.jsonpath(res_dict, "$.data")
-        strdatas="".join(map(str,datas))
-        intDatas=int(strdatas)
-        assert Alarm_PathDatas["data"] == intDatas
+        with allure.step("第三步：将接口返回的数据转化为json格式"):
+            res_dict = json.loads((res.text))
+        with allure.step("第四步：取出data字段，并转化为int"):
+            datas = jsonpath.jsonpath(res_dict, "$.data")
+            strdatas="".join(map(str,datas))
+            intDatas=int(strdatas)
+        with allure.step("第五步：将取出来的data与预期结果做断言"):
+            assert Alarm_PathDatas["data"] == intDatas
 
 
+
+    @allure.story("已通报")
+    @allure.severity("normal")
     def test_info01(self):
-        LoggerUtil().create_log().info("开始运行已通报测试用例：{}".format(Alarm_PathDatas["info01"]))
+        allure.dynamic.title("测试用例标题：%s" % (Alarm_PathDatas["info01"]))
         headers = {"Content-Type":"application/json","Authorization": read_token_yaml()}
-        res = Request().post_json_requests(
+        with allure.step("第一步：发送post请求，接口地址：{}".format(conf.get("set", "test_url") +Alarm_PathDatas["api_info01"])):
+            res = Request().post_json_requests(
             conf.get("set", "test_url") + Alarm_PathDatas["api_info01"],json=json.dumps(Alarm_PathDatas["pload_datas"]),headers=headers)
-        res_dict = json.loads((res.text))
-        size=jsonpath.jsonpath(res_dict,"$.data.size")
-        strsize = "".join(map(str, size))
-        intsize = int(strsize)
-        assert Alarm_PathDatas["size"] == intsize
+        with allure.step("第二步：将接口返回的数据转化为json格式"):
+            res_dict = json.loads((res.text))
+        with allure.step("第三步：取出size字段，并转化为int"):
+            size=jsonpath.jsonpath(res_dict,"$.data.size")
+            strsize = "".join(map(str, size))
+            intsize = int(strsize)
+        with allure.step("第四步：将取出来的size字段与预期做断言"):
+            assert Alarm_PathDatas["size"] == intsize
 
 
 
 
+
+    @allure.story("已忽略")
+    @allure.severity("normal")
     def test_info02(self):
-        LoggerUtil().create_log().info("开始运行已忽略测试用例：{}".format(Alarm_PathDatas["info02"]))
+        allure.dynamic.title("测试用例标题：%s" % (Alarm_PathDatas["info02"]))
         headers = {"Content-Type":"application/json","Authorization": read_token_yaml()}
-        res = Request().post_json_requests(
+        with allure.step("第一步：发送post请求，接口地址：{}".format(conf.get("set", "test_url") +Alarm_PathDatas["api_info02"])):
+            res = Request().post_json_requests(
             conf.get("set", "test_url") + Alarm_PathDatas["api_info02"],json=json.dumps(Alarm_PathDatas["pload_datas01"]),headers=headers)
-        res_dict = json.loads((res.text))
-        size01=jsonpath.jsonpath(res_dict,"$.data.size")
-        strsize = "".join(map(str, size01))
-        intsize = int(strsize)
-        assert Alarm_PathDatas["size01"] == intsize
+        with allure.step("第二步：将接口返回的数据转化为json格式"):
+            res_dict = json.loads((res.text))
+        with allure.step("第三步：取出size字段，并转化为int"):
+            size01=jsonpath.jsonpath(res_dict,"$.data.size")
+            strsize = "".join(map(str, size01))
+            intsize = int(strsize)
+        with allure.step("第四步：将取出来的size字段与预期做断言"):
+            assert Alarm_PathDatas["size01"] == intsize
 
 
 
 
-
+    @allure.story("已恢复")
+    @allure.severity("normal")
     def test_info03(self):
-        LoggerUtil().create_log().info("开始运行已忽略测试用例：{}".format(Alarm_PathDatas["info02"]))
+        allure.dynamic.title("测试用例标题：%s" % (Alarm_PathDatas["info02"]))
         headers = {"Content-Type": "application/json", "Authorization": read_token_yaml()}
-        res = Request().post_json_requests(
+        with allure.step("第一步：发送post请求，接口地址：{}".format(conf.get("set", "test_url") +Alarm_PathDatas["api_info03"])):
+            res = Request().post_json_requests(
             conf.get("set", "test_url") + Alarm_PathDatas["api_info03"],
             json=json.dumps(Alarm_PathDatas["pload_datas02"]), headers=headers)
-        res_dict = json.loads((res.text))
-        size01 = jsonpath.jsonpath(res_dict, "$.data.size")
-        strsize = "".join(map(str, size01))
-        intsize = int(strsize)
-        assert Alarm_PathDatas["size02"] == intsize
+        with allure.step("第二步：将接口返回的数据转化为json格式"):
+            res_dict = json.loads((res.text))
+        with allure.step("第三步：取出size字段，并转化为int"):
+            size01 = jsonpath.jsonpath(res_dict, "$.data.size")
+            strsize = "".join(map(str, size01))
+            intsize = int(strsize)
+        with allure.step("第四步：将取出来的size字段与预期做断言"):
+            assert Alarm_PathDatas["size02"] == intsize
 
 
 

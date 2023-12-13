@@ -1,0 +1,4 @@
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:test_Equipment_Pages_api.py:38 开始运行查看部位信息:测点，过滤波形测试用例：admin账号登录查看----查看部位信息:测点，过滤波形
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:20 请求地址：https://web-pro-test.imotorlinx.cn/imotor-api/imotor/device/api/v1/devicePoint/detail?tenantId=21323&tenantType=1
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:21 请求数据{'id': 67007}
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:23 响应数据{"metadata":{"path":"/api/v1/devicePoint/detail","httpStatusCode":200,"httpStatus":"OK","message":"POST /api/v1/devicePoint/detail [200] OK","timestamp":1701917093},"code":200,"data":{"id":67007,"deviceId":13968,"positionName":"电机非驱动端","point":[]},"msg":null}

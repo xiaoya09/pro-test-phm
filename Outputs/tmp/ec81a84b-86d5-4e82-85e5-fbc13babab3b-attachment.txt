@@ -1,0 +1,3 @@
+[32m2023-12-07 10:45:27,556设备健康管理（PHM)日志控制台INFOSendRequests.py-31:请求地址：https://web-pro-test.imotorlinx.cn/imotor-api/imotor/device/api/v1/device/work/queryWorkTypeNum?tenantId=21323&tenantType=1[0m
+[32m2023-12-07 10:45:27,556设备健康管理（PHM)日志控制台INFOSendRequests.py-32:请求数据None[0m
+[32m2023-12-07 10:45:27,960设备健康管理（PHM)日志控制台INFOSendRequests.py-34:响应数据{"metadata":{"path":"/api/v1/device/work/queryWorkTypeNum","httpStatusCode":200,"httpStatus":"OK","message":"POST /api/v1/device/work/queryWorkTypeNum [200] OK","timestamp":1701917128},"code":200,"data":null,"msg":null}[0m

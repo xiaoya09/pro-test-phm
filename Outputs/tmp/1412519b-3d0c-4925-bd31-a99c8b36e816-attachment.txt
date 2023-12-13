@@ -1,0 +1,4 @@
+[32m2023-12-07 10:45:02,933设备健康管理（PHM)日志控制台INFOtest_Equipment_Pages_api.py-129:开始运行设备健康分数测试用例：admin账号登录查看----设备健康分数[0m
+[32m2023-12-07 10:45:02,934设备健康管理（PHM)日志控制台INFOSendRequests.py-10:请求地址：https://web-pro-test.imotorlinx.cn/imotor-api/imotor/device/api/v1/devicenew/dataCenter/healthCondition?deviceId=14010&tenantId=21323&tenantType=1[0m
+[32m2023-12-07 10:45:02,934设备健康管理（PHM)日志控制台INFOSendRequests.py-11:请求数据None[0m
+[32m2023-12-07 10:45:03,250设备健康管理（PHM)日志控制台INFOSendRequests.py-13:响应数据{"metadata":{"path":"/api/v1/devicenew/dataCenter/healthCondition","httpStatusCode":200,"httpStatus":"OK","message":"GET /api/v1/devicenew/dataCenter/healthCondition [200] OK","timestamp":1701917103},"code":200,"data":{"score":"46.89","deviceId":"14010","grade":"UNHEAL"},"msg":null}[0m

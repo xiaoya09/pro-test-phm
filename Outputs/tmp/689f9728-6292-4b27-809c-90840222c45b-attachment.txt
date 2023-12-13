@@ -1,0 +1,4 @@
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:test_Equipment_Pages_api.py:22 开始运行设备是否装置测试用例：admin账号登录查看----设备是否装置
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:31 请求地址：https://web-pro-test.imotorlinx.cn/imotor-api/imotor/device/api/v1/devicenew/isEquipment?tenantId=21323&tenantType=1
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:32 请求数据None
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:34 响应数据{"metadata":{"path":"/api/v1/devicenew/isEquipment","httpStatusCode":200,"httpStatus":"OK","message":"POST /api/v1/devicenew/isEquipment [200] OK","timestamp":1701917092},"code":200,"data":{"equipment":true,"deviceId":14049},"msg":null}

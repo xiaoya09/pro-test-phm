@@ -1,0 +1,4 @@
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:test_Equipment_Pages_api.py:292 开始运行编辑图片打点测试用例：admin账号登录查看---编辑图片打点
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:43 请求地址：https://web-base-test.imotorlinx.cn/api/metaverse/business/iot/device/edit?tenantId=21323&tenantType=1
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:44 请求数据{"imageConfig": "https://shunos-iot-test.oss-cn-qingdao.aliyuncs.com/dm/21324/e9a0bea3679245018cdcd94fd1fad7a6.jpg", "mainImg": "https://shunos-iot-test.oss-cn-qingdao.aliyuncs.com/dm/21324/e9a0bea3679245018cdcd94fd1fad7a6.jpg", "iotDeviceId": 1719620333834731520}
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:46 响应数据{"metadata":{"path":"/iot/device/edit","httpStatusCode":200,"httpStatus":"OK","message":"PUT /iot/device/edit [200] OK","timestamp":1701917110},"code":200,"data":null,"msg":null}

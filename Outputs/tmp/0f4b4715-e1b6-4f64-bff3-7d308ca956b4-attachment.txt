@@ -1,0 +1,4 @@
+[32m2023-12-07 10:45:04,030设备健康管理（PHM)日志控制台INFOtest_Equipment_Pages_api.py-170:开始运行设备开机率测试用例：admin账号登录查看----设备开机率[0m
+[32m2023-12-07 10:45:04,031设备健康管理（PHM)日志控制台INFOSendRequests.py-20:请求地址：https://web-pro-test.imotorlinx.cn/imotor-api/imotor/device/api/v1/device/operationRate?tenantId=21323&tenantType=1[0m
+[32m2023-12-07 10:45:04,031设备健康管理（PHM)日志控制台INFOSendRequests.py-21:请求数据{'id': 14010}[0m
+[32m2023-12-07 10:45:04,393设备健康管理（PHM)日志控制台INFOSendRequests.py-23:响应数据{"code":200,"msg":"操作成功","data":null}[0m

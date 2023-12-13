@@ -1,0 +1,4 @@
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:test_Equipment_Pages_api.py:238 开始运行添加诊断结论测试用例：admin账号登录查看---添加诊断结论--add
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:31 请求地址：https://web-pro-test.imotorlinx.cn/imotor-api/imotor/device/api/v1/diagnostic/diagnostic/conclusion/add?tenantId=21323&tenantType=1
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:32 请求数据{"id": 14010}
+[32mINFO    [0m 设备健康管理（PHM)日志控制台:SendRequests.py:34 响应数据{"metadata":{"path":"/api/v1/diagnostic/diagnostic/conclusion/add","httpStatusCode":200,"httpStatus":"OK","message":"POST /api/v1/diagnostic/diagnostic/conclusion/add [200] OK","timestamp":1701917107},"code":200,"data":null,"msg":null}
