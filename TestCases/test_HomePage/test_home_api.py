@@ -9,7 +9,6 @@ HomePages_Path=os.path.join(configYaml+r'\HomePage.yaml')
 HomePages_Datas=Yaml_data().read_yaml(HomePages_Path)
 
 
-@allure.epic("大账号首页功能")
 @allure.feature('首页接口')
 class Test_HomePage:
 
